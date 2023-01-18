@@ -1,13 +1,70 @@
+/* ======== Imports ======== */
+
+@import "mixins.scss";
+@import "variables.scss";
 @font-face {
     font-family: robotoM;
     src: url(../fonts/Roboto/Roboto-Medium.ttf);
 }
 
 body {
-    background-color: #dddddd;
-    width: ;
+    background-color: #dddddd55;
+    width: 600px;
+    margin: auto;
+    @include font;
 }
 
 * {
     margin: 0   ;
+}
+
+h2 {
+    font-size: 2.3rem;
+}
+
+.header {
+    height: 200px;
+    @include marginSide;
+    margin-top: 20px;
+
+}
+
+.headline {
+    height: 400px;
+    @include marginSide;
+    h1 {
+        font-size: 4rem;
+    }
+}
+
+.textSection {
+    @include marginSide;
+    margin-bottom: 50px !important;;
+    div {
+        h2 {
+            text-align: center;
+        }
+        margin-top: 50px;
+        p {
+            width: 90%;
+            margin: auto;
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.mainGrid {
+    @include marginSide;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: 400px 200px 400px 400px 400px 400px;
+    article {
+        width: 500px;
+        h4 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+    }
 }

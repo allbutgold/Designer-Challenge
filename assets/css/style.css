@@ -1,17 +1,76 @@
-/* Error: Expected expression.
- *   ,
- * 8 |     width: ;
- *   |            ^
- *   '
- *   assets/scss/main.scss 8:12  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Expected expression.\a   \2577 \a 8 \2502      width: ;\a   \2502             ^\a   \2575 \a   assets/scss/main.scss 8:12  root stylesheet";
+/* ======== Imports ======== */
+@font-face {
+  font-family: robotoM;
+  src: url(../fonts/Roboto/Roboto-Medium.ttf);
 }
+body {
+  background-color: rgba(221, 221, 221, 0.3333333333);
+  width: 600px;
+  margin: auto;
+  color: #0b0c17;
+  font-family: robotoM;
+}
+
+* {
+  margin: 0;
+}
+
+h2 {
+  font-size: 2.3rem;
+}
+
+.header {
+  height: 200px;
+  width: calc(100% - 100px);
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 20px;
+}
+
+.headline {
+  height: 400px;
+  width: calc(100% - 100px);
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.headline h1 {
+  font-size: 4rem;
+}
+
+.textSection {
+  width: calc(100% - 100px);
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px !important;
+}
+.textSection div {
+  margin-top: 50px;
+}
+.textSection div h2 {
+  text-align: center;
+}
+.textSection div p {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.mainGrid {
+  width: calc(100% - 100px);
+  margin-left: 50px;
+  margin-right: 50px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row: 400px 200px 400px 400px 400px 400px;
+}
+.mainGrid article {
+  width: 500px;
+}
+.mainGrid article h4 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */
