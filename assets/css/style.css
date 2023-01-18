@@ -3,27 +3,24 @@
   font-family: robotoM;
   src: url(../fonts/Roboto/Roboto-Medium.ttf);
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: rgba(221, 221, 221, 0.3333333333);
-  width: 600px;
-  margin: auto;
+  max-width: 600px;
   color: #0b0c17;
   font-family: robotoM;
 }
 
-* {
-  margin: 0;
-}
-
 h2 {
-  font-size: 2.3rem;
+  font-size: 2.5rem;
 }
 
 .header {
   height: 200px;
-  width: calc(100% - 100px);
-  margin-left: 50px;
-  margin-right: 50px;
   margin-top: 20px;
 }
 
@@ -65,13 +62,20 @@ h2 {
   margin-bottom: 40px;
 }
 
+.styledNumber {
+  color: #dddddd;
+  font-size: 4rem;
+  margin-bottom: 15px;
+  width: 500px;
+}
+
 .mainGrid {
   width: calc(100% - 100px);
   margin-left: 50px;
   margin-right: 50px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-row: 400px 200px 400px 400px 400px 400px;
+  grid-template-rows: 400px 400px 400px 400px 400px 400px;
   /* === Article 1 (text) ===  */
   /* === Article 2 (text) ===  */
   /* === Article 3 (image) ===  */
@@ -84,26 +88,21 @@ h2 {
   /* === Article 10 (text) ===  */
 }
 .mainGrid article:nth-of-type(1) {
-  margin-top: 50px;
-  width: 500px;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin: 0;
 }
-.mainGrid article:nth-of-type(1) h4 {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-size: 1.5rem;
+.mainGrid article:nth-of-type(1) figure {
+  max-width: 600px;
+  height: 400px;
 }
-.mainGrid article:nth-of-type(1) p {
-  width: 90%;
-  margin: auto;
-  margin-bottom: 40px;
-}
-.mainGrid article:nth-of-type(2) {
-  width: 600px;
-  margin-top: 50px;
-}
-.mainGrid article:nth-of-type(2) h2 {
-  margin-top: 50px;
-  margin-bottom: 20px;
+.mainGrid article:nth-of-type(1) figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .mainGrid article:nth-of-type(3) {
   width: 600px;
@@ -130,13 +129,11 @@ h2 {
   margin-top: 50px;
 }
 .mainGrid article:nth-of-type(4) p {
-  text-align: center;
   width: calc(100% - 100px);
   margin-left: 50px;
   margin-right: 50px;
 }
 .mainGrid article:nth-of-type(4) h4 {
-  text-align: center;
   font-size: 1.3rem;
   margin-bottom: 20px;
 }
@@ -165,13 +162,11 @@ h2 {
   margin-top: 50px;
 }
 .mainGrid article:nth-of-type(6) p {
-  text-align: center;
   width: calc(100% - 100px);
   margin-left: 50px;
   margin-right: 50px;
 }
 .mainGrid article:nth-of-type(6) h4 {
-  text-align: center;
   font-size: 1.3rem;
   margin-bottom: 20px;
 }
@@ -200,13 +195,11 @@ h2 {
   margin-top: 50px;
 }
 .mainGrid article:nth-of-type(8) p {
-  text-align: center;
   width: calc(100% - 100px);
   margin-left: 50px;
   margin-right: 50px;
 }
 .mainGrid article:nth-of-type(8) h4 {
-  text-align: center;
   font-size: 1.3rem;
   margin-bottom: 20px;
 }
@@ -236,13 +229,11 @@ h2 {
   margin-bottom: 100px;
 }
 .mainGrid article:nth-of-type(10) p {
-  text-align: center;
   width: calc(100% - 100px);
   margin-left: 50px;
   margin-right: 50px;
 }
 .mainGrid article:nth-of-type(10) h4 {
-  text-align: center;
   font-size: 1.3rem;
   margin-bottom: 20px;
 }
@@ -261,6 +252,246 @@ footer article form {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    margin: 0;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 600px) {
+  p {
+    text-align: left;
+  }
+  body {
+    margin: auto;
+    max-width: 1400px;
+  }
+  .headContainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-image: url(../img/ilustracion1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    margin-bottom: 100px;
+  }
+  .headContainer .headline article {
+    width: 500px;
+  }
+  .gallery {
+    width: 100vw;
+    margin-bottom: 100px;
+  }
+  .gallery figure {
+    width: 100%;
+  }
+  .gallery figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .textSection {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .textSection article:nth-of-type(1) {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .textSection article:nth-of-type(1) div:nth-of-type(1) {
+    width: 20%;
+  }
+  .textSection article:nth-of-type(1) div:nth-of-type(2) {
+    width: 40%;
+  }
+  .textSection article:nth-of-type(2) {
+    margin-top: 100px;
+  }
+  .textSection article:nth-of-type(2) h2 {
+    width: 40%;
+  }
+  .howItWorks {
+    margin: auto;
+    width: calc(100% - 100px);
+    max-width: 1200px;
+  }
+  .howItWorks article:nth-of-type(1) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 300px;
+  }
+  .howItWorks article:nth-of-type(1) div {
+    width: 60%;
+    margin: auto;
+  }
+  .howItWorks article:nth-of-type(1) div img {
+    margin-top: 50px;
+    width: 10%;
+  }
+  .howItWorks article:nth-of-type(1) div h4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+  .howItWorks article:nth-of-type(1) div p {
+    margin-bottom: 40px;
+  }
+  .howItWorks article:nth-of-type(2) {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    text-align: center;
+  }
+  .howItWorks article:nth-of-type(2) h2 {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .howItWorks article:nth-of-type(2) p {
+    width: 60%;
+  }
+  .mainGrid {
+    width: calc(100% - 100px);
+    max-width: 1200px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 600px 600px 600px;
+    align-items: center;
+    margin: auto;
+  }
+  .mainGrid article:nth-of-type(1) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+  .mainGrid article:nth-of-type(1) figure {
+    max-width: 600px;
+    height: 400px;
+  }
+  .mainGrid article:nth-of-type(1) figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .mainGrid article:nth-of-type(2) {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .mainGrid article:nth-of-type(2) p, .mainGrid article:nth-of-type(2) h4 {
+    margin-left: 0;
+  }
+  .mainGrid article:nth-of-type(2) figure {
+    width: 100%;
+  }
+  .mainGrid article:nth-of-type(3) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+  .mainGrid article:nth-of-type(3) figure {
+    width: 600px;
+    height: 400px;
+  }
+  .mainGrid article:nth-of-type(3) figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .mainGrid article:nth-of-type(4) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .mainGrid article:nth-of-type(4) p, .mainGrid article:nth-of-type(4) h4 {
+    margin-left: 0;
+  }
+  .mainGrid article:nth-of-type(4) figure {
+    width: 100%;
+  }
+  .mainGrid article:nth-of-type(5) {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+  .mainGrid article:nth-of-type(5) figure {
+    width: 600px;
+    height: 400px;
+  }
+  .mainGrid article:nth-of-type(5) figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .mainGrid article:nth-of-type(6) {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .mainGrid article:nth-of-type(6) p, .mainGrid article:nth-of-type(6) h4 {
+    margin-left: 0;
+  }
+  .mainGrid article:nth-of-type(6) figure {
+    width: 100%;
+  }
+  .mainGrid article:nth-of-type(7) {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+  .mainGrid article:nth-of-type(7) figure {
+    width: 600px;
+    height: 400px;
+  }
+  .mainGrid article:nth-of-type(7) figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .mainGrid article:nth-of-type(8) {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .mainGrid article:nth-of-type(8) p, .mainGrid article:nth-of-type(8) h4 {
+    margin-left: 0;
+  }
+  .mainGrid article:nth-of-type(8) figure {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

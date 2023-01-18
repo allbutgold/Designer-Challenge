@@ -2,29 +2,30 @@
 
 @import "mixins.scss";
 @import "variables.scss";
+
 @font-face {
     font-family: robotoM;
     src: url(../fonts/Roboto/Roboto-Medium.ttf);
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    background-color: #dddddd55;
-    width: 600px;
-    margin: auto;
+    max-width: 600px;
     @include font;
 }
 
-* {
-    margin: 0   ;
-}
+
 
 h2 {
-    font-size: 2.3rem;
+    font-size: 2.5rem;
 }
 
 .header {
     height: 200px;
-    @include marginSide;
     margin-top: 20px;
 
 }
@@ -64,36 +65,41 @@ h2 {
     }
 }
 
+.styledNumber {
+    @include styledNumber;
+}
+
+.howItWorks {
+
+}
+
+
 .mainGrid {
     @include marginSide;
     display: grid;
     grid-template-columns: 1fr;
-    grid-row: 400px 200px 400px 400px 400px 400px;
+    grid-template-rows: 400px 400px 400px 400px 400px 400px;
 
     /* === Article 1 (text) ===  */
-    article:nth-of-type(1) {
-        margin-top: 50px;
-        width: 500px;
-        h4 {
-            margin-top: 20px;
-            margin-bottom: 20px;
-            font-size: 1.5rem;
-        }
-        p {
-            width: 90%;
-            margin: auto;
-            margin-bottom: 40px;
+    article:nth-of-type(1){
+        grid-column: 1/2;
+        grid-row: 1/2;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        figure {
+            max-width: 600px;
+            height: 400px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
         }
     }
         /* === Article 2 (text) ===  */
-    article:nth-of-type(2) {
-        width: 600px;
-        margin-top: 50px;
-        h2 {
-            margin-top: 50px;
-            margin-bottom: 20px;
-        }
-    }
+ 
         /* === Article 3 (image) ===  */
     article:nth-of-type(3) {
         width: 600px;
@@ -123,11 +129,11 @@ h2 {
         width: 500px;
         margin-top: 50px;
             p {
-                text-align: center;
+
                 @include marginSide;
             }
             h4 {
-                text-align: center;
+
                 font-size: 1.3rem;
                 margin-bottom: 20px;
             }
@@ -160,11 +166,11 @@ h2 {
             width: 500px;
             margin-top: 50px;
                 p {
-                    text-align: center;
+
                     @include marginSide;
                 }
                 h4 {
-                    text-align: center;
+
                     font-size: 1.3rem;
                     margin-bottom: 20px;
                 }
@@ -197,11 +203,11 @@ h2 {
             width: 500px;
             margin-top: 50px;
                 p {
-                    text-align: center;
+
                     @include marginSide;
                 }
                 h4 {
-                    text-align: center;
+
                     font-size: 1.3rem;
                     margin-bottom: 20px;
                 }
@@ -235,11 +241,11 @@ h2 {
             margin-top: 50px;
             margin-bottom: 100px;
                 p {
-                    text-align: center;
+
                     @include marginSide;
                 }
                 h4 {
-                    text-align: center;
+
                     font-size: 1.3rem;
                     margin-bottom: 20px;
                 }
@@ -264,4 +270,230 @@ footer {
             margin-bottom: 50px;
         }
     }
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    body {
+        margin: 0;
+        text-align: center;
+    }    
+}
+
+
+@media screen and (min-width: 600px) {
+    p {
+        text-align: left;
+    }
+    body {
+        margin: auto;
+        max-width: 1400px;
+    }
+
+    .headContainer {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-image: url(../img/ilustracion1.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-x: right;
+        margin-bottom: 100px;
+        .headline {
+            article {
+                width : 500px;
+            }
+        }
+    }
+
+
+    .gallery {
+        width: 100vw;
+        margin-bottom: 100px;
+        figure {
+            width: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .textSection {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        article:nth-of-type(1) {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            div:nth-of-type(1) {
+                width: 20%;
+            }
+            div:nth-of-type(2) {
+                width: 40%;
+            }
+        }
+        article:nth-of-type(2){
+            margin-top: 100px;
+            h2 {
+                width: 40%;
+            }
+        }
+        
+    }
+
+    .howItWorks { 
+        margin: auto;
+        width: calc(100% - 100px);
+        max-width: 1200px;
+        article:nth-of-type(1) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 300px 300px;    
+            div {  
+                width: 60%;
+                margin: auto;
+                img {
+                    margin-top: 50px;
+                    width: 10%;
+                    
+                }
+                h4 {
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    font-size: 1.5rem;
+                }
+                p {
+
+                    margin-bottom: 40px;
+                }
+            }
+            
+        }
+        article:nth-of-type(2) {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 100px;
+            text-align: center;
+            h2 {
+                width: 100%;
+                margin-bottom: 40px;
+            }
+            p {
+                width: 60%;
+            }
+        }
+        
+    
+    }
+
+    .mainGrid {
+        width: calc(100% - 100px);
+        max-width: 1200px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:  600px 600px 600px;
+        align-items: center;
+        margin: auto;
+        article:nth-of-type(1){
+            grid-column: 1/2;
+            grid-row: 1/2;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            figure {
+                max-width: 600px;
+                height: 400px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+        article:nth-of-type(2) {
+            grid-column: 2/3;
+            grid-row: 1/2;
+            @include gridArticle;
+
+        }
+        article:nth-of-type(3){
+            grid-column: 2/3;
+            grid-row: 2/3;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            figure {
+                width: 600px;
+                height: 400px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+        article:nth-of-type(4) {
+            grid-column: 1/2;
+            grid-row: 2/3;
+            @include gridArticle;
+        }
+        article:nth-of-type(5){
+            grid-column: 1/2;
+            grid-row: 3/4;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            figure {
+                width: 600px;
+                height: 400px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+        article:nth-of-type(6) {
+            grid-column: 2/3;
+            grid-row: 3/4;
+            @include gridArticle;
+        }
+        article:nth-of-type(7){
+            grid-column: 2/3;
+            grid-row: 4/5;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            figure {
+                width: 600px;
+                height: 400px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+        article:nth-of-type(8) {
+            grid-column: 1/2;
+            grid-row: 4/5;
+            @include gridArticle;
+        }
+        
+        
+}
 }

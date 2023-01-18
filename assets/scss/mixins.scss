@@ -11,3 +11,24 @@
     margin-right: 50px;
     
 }
+
+@mixin styledNumber {
+    color: #dddddd;
+    font-size: 4rem;
+    margin-bottom: 15px;
+    width: 500px;
+}
+
+@mixin gridArticle {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    p, h4 {
+        margin-left: 0;
+    }
+    figure {
+        width: 100%;
+    }
+}
