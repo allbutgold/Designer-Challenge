@@ -37,6 +37,19 @@ h2 {
   font-size: 4rem;
 }
 
+.gallery {
+  width: 600px;
+}
+.gallery figure {
+  width: 500px;
+  margin: auto;
+}
+.gallery figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .textSection {
   width: calc(100% - 100px);
   margin-left: 50px;
@@ -45,9 +58,6 @@ h2 {
 }
 .textSection div {
   margin-top: 50px;
-}
-.textSection div h2 {
-  text-align: center;
 }
 .textSection div p {
   width: 90%;
@@ -62,15 +72,195 @@ h2 {
   display: grid;
   grid-template-columns: 1fr;
   grid-row: 400px 200px 400px 400px 400px 400px;
+  /* === Article 1 (text) ===  */
+  /* === Article 2 (text) ===  */
+  /* === Article 3 (image) ===  */
+  /* === Article 4 (text) ===  */
+  /* === Article 5 (image) ===  */
+  /* === Article 6 (text) ===  */
+  /* === Article 7 (image) ===  */
+  /* === Article 8 (text) ===  */
+  /* === Article 9 (image) ===  */
+  /* === Article 10 (text) ===  */
 }
-.mainGrid article {
+.mainGrid article:nth-of-type(1) {
+  margin-top: 50px;
   width: 500px;
 }
-.mainGrid article h4 {
+.mainGrid article:nth-of-type(1) h4 {
   margin-top: 20px;
   margin-bottom: 20px;
   font-size: 1.5rem;
+}
+.mainGrid article:nth-of-type(1) p {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 40px;
+}
+.mainGrid article:nth-of-type(2) {
+  width: 600px;
+  margin-top: 50px;
+}
+.mainGrid article:nth-of-type(2) h2 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.mainGrid article:nth-of-type(3) {
+  width: 600px;
+  margin-top: 50px;
+}
+.mainGrid article:nth-of-type(3) figure {
+  width: 500px;
+}
+.mainGrid article:nth-of-type(3) figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mainGrid article:nth-of-type(3) div p {
+  width: 90%;
+  margin: auto;
+}
+.mainGrid article:nth-of-type(3) div h4 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+.mainGrid article:nth-of-type(4) {
+  width: 500px;
+  margin-top: 50px;
+}
+.mainGrid article:nth-of-type(4) p {
   text-align: center;
+  width: calc(100% - 100px);
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.mainGrid article:nth-of-type(4) h4 {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+.mainGrid article:nth-of-type(5) {
+  width: 600px;
+  margin-top: 50px;
+}
+.mainGrid article:nth-of-type(5) figure {
+  width: 500px;
+}
+.mainGrid article:nth-of-type(5) figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mainGrid article:nth-of-type(5) div p {
+  width: 90%;
+  margin: auto;
+}
+.mainGrid article:nth-of-type(5) div h4 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+.mainGrid article:nth-of-type(6) {
+  width: 500px;
+  margin-top: 50px;
+}
+.mainGrid article:nth-of-type(6) p {
+  text-align: center;
+  width: calc(100% - 100px);
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.mainGrid article:nth-of-type(6) h4 {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+.mainGrid article:nth-of-type(7) {
+  width: 600px;
+  margin-top: 50px;
+}
+.mainGrid article:nth-of-type(7) figure {
+  width: 500px;
+}
+.mainGrid article:nth-of-type(7) figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mainGrid article:nth-of-type(7) div p {
+  width: 90%;
+  margin: auto;
+}
+.mainGrid article:nth-of-type(7) div h4 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+.mainGrid article:nth-of-type(8) {
+  width: 500px;
+  margin-top: 50px;
+}
+.mainGrid article:nth-of-type(8) p {
+  text-align: center;
+  width: calc(100% - 100px);
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.mainGrid article:nth-of-type(8) h4 {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+.mainGrid article:nth-of-type(9) {
+  width: 600px;
+  margin-top: 50px;
+}
+.mainGrid article:nth-of-type(9) figure {
+  width: 500px;
+}
+.mainGrid article:nth-of-type(9) figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mainGrid article:nth-of-type(9) div p {
+  width: 90%;
+  margin: auto;
+}
+.mainGrid article:nth-of-type(9) div h4 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+.mainGrid article:nth-of-type(10) {
+  width: 500px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.mainGrid article:nth-of-type(10) p {
+  text-align: center;
+  width: calc(100% - 100px);
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.mainGrid article:nth-of-type(10) h4 {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+footer article h2 {
+  text-align: center;
+}
+footer article p {
+  text-align: center;
+  width: calc(100% - 100px);
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+}
+footer article form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */

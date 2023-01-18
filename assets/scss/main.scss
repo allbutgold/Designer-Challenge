@@ -37,13 +37,24 @@ h2 {
     }
 }
 
+.gallery {
+    width: 600px;
+
+        figure {
+            width: 500px;
+            margin: auto;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+}
+
 .textSection {
     @include marginSide;
     margin-bottom: 50px !important;;
     div {
-        h2 {
-            text-align: center;
-        }
         margin-top: 50px;
         p {
             width: 90%;
@@ -58,13 +69,199 @@ h2 {
     display: grid;
     grid-template-columns: 1fr;
     grid-row: 400px 200px 400px 400px 400px 400px;
-    article {
+
+    /* === Article 1 (text) ===  */
+    article:nth-of-type(1) {
+        margin-top: 50px;
         width: 500px;
         h4 {
             margin-top: 20px;
             margin-bottom: 20px;
             font-size: 1.5rem;
+        }
+        p {
+            width: 90%;
+            margin: auto;
+            margin-bottom: 40px;
+        }
+    }
+        /* === Article 2 (text) ===  */
+    article:nth-of-type(2) {
+        width: 600px;
+        margin-top: 50px;
+        h2 {
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+    }
+        /* === Article 3 (image) ===  */
+    article:nth-of-type(3) {
+        width: 600px;
+        margin-top: 50px;
+        figure {
+            width: 500px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        div {
+            p {
+                width: 90%;
+                margin: auto;
+            }
+            h4 {
+                font-size: 1.3rem;
+                margin-bottom: 20px;
+            }
+        }
+        
+    }
+        /* === Article 4 (text) ===  */
+    article:nth-of-type(4) {
+        width: 500px;
+        margin-top: 50px;
+            p {
+                text-align: center;
+                @include marginSide;
+            }
+            h4 {
+                text-align: center;
+                font-size: 1.3rem;
+                margin-bottom: 20px;
+            }
+    }
+        /* === Article 5 (image) ===  */
+    article:nth-of-type(5) {
+        width: 600px;
+        margin-top: 50px;
+        figure {
+            width: 500px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        div {
+            p {
+                width: 90%;
+                margin: auto;
+            }
+            h4 {
+                font-size: 1.3rem;
+                margin-bottom: 20px;
+            }
+        }
+    }
+        /* === Article 6 (text) ===  */
+        article:nth-of-type(6) {
+            width: 500px;
+            margin-top: 50px;
+                p {
+                    text-align: center;
+                    @include marginSide;
+                }
+                h4 {
+                    text-align: center;
+                    font-size: 1.3rem;
+                    margin-bottom: 20px;
+                }
+        }
+        /* === Article 7 (image) ===  */
+    article:nth-of-type(7) {
+        width: 600px;
+        margin-top: 50px;
+        figure {
+            width: 500px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        div {
+            p {
+                width: 90%;
+                margin: auto;
+            }
+            h4 {
+                font-size: 1.3rem;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    /* === Article 8 (text) ===  */
+        article:nth-of-type(8) {
+            width: 500px;
+            margin-top: 50px;
+                p {
+                    text-align: center;
+                    @include marginSide;
+                }
+                h4 {
+                    text-align: center;
+                    font-size: 1.3rem;
+                    margin-bottom: 20px;
+                }
+        }
+        /* === Article 9 (image) ===  */
+        article:nth-of-type(9) {
+            width: 600px;
+            margin-top: 50px;
+            figure {
+                width: 500px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            div {
+                p {
+                    width: 90%;
+                    margin: auto;
+                }
+                h4 {
+                    font-size: 1.3rem;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+/* === Article 10 (text) ===  */
+        article:nth-of-type(10) {
+            width: 500px;
+            margin-top: 50px;
+            margin-bottom: 100px;
+                p {
+                    text-align: center;
+                    @include marginSide;
+                }
+                h4 {
+                    text-align: center;
+                    font-size: 1.3rem;
+                    margin-bottom: 20px;
+                }
+        }
+        
+}
+
+
+footer {
+    article {
+        h2 {
             text-align: center;
+        }
+        p {
+            text-align: center;
+            @include marginSide;
+            margin-bottom: 50px;
+        }
+        form {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
         }
     }
 }
